@@ -1138,7 +1138,7 @@ body.active { overflow: hidden; }
   #FOOTER
 \*-----------------------------------*/
 
-.footer { overflow: hidden; }
+.footer { overflow-x: clip; }
 
 .footer-top {
   position: relative;
@@ -1150,11 +1150,13 @@ body.active { overflow: hidden; }
 }
 
 .footer-top::after {
-  content: url(../images/delivery-boy.svg);
+  content: "";
   position: absolute;
   bottom: -11px;
   left: -160px;
   width: 160px;
+  height: 100px; /* sesuaikan dengan rasio gambar */
+  background: url(../images/vector.png) no-repeat center / contain;
   animation: running-cycle 20s linear infinite;
 }
 
@@ -1685,7 +1687,7 @@ textarea.input-field {
 
   .footer-top .container { grid-template-columns: 1fr 1fr 1fr 1.6fr; }
 
-  .footer-form { margin-block-start: -170px; }
+  .footer-form { margin-block-start: -10px; }
 
 
 
